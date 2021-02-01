@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   imageWrapper: {
     flex: 1,
     overflow: 'hidden',
-    borderRadius: 10,
+    borderRadius: 20,
   },
   theImage: {
     width: '100%',

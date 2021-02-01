@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import {Pressable, StyleSheet, View, ImageBackground, Text} from 'react-native';
-import IconMI from 'react-native-vector-icons/MaterialIcons';
 import coachImage from './../../assets/images/Group.jpg';
 
 class SearchGroup extends PureComponent {
@@ -30,7 +29,7 @@ const styles = StyleSheet.create({
   imageWrapper: {
     flex: 1,
     overflow: 'hidden',
-    borderRadius: 10,
+    borderRadius: 20,
   },
   theImage: {
     width: '100%',
