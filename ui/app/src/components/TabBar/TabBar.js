@@ -1,11 +1,9 @@
 import React, {PureComponent} from 'react';
 import {Pressable, StyleSheet, View} from 'react-native';
-import {Actions} from 'react-native-router-flux';
 import Icon from 'react-native-vector-icons/AntDesign';
 import IconMC from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconION from 'react-native-vector-icons/Ionicons';
 import IconMI from 'react-native-vector-icons/MaterialIcons';
-import {routeFix} from '../../utils/helper';
 import {Text} from '../UI';
 
 class TabBar extends PureComponent {
@@ -19,11 +17,11 @@ class TabBar extends PureComponent {
     this.setState({activeTab: route});
 
     if (route === 'Home') {
-      Actions.replace(route);
+      //Actions.replace(route);
       return false;
     }
 
-    routeFix(route);
+   // routeFix(route);
   };
 
   render() {

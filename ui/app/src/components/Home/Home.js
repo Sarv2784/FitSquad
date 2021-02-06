@@ -1,21 +1,30 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, StatusBar, Text, Dimensions} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  StatusBar,
+  Text,
+  Dimensions,
+  SafeAreaView,
+} from 'react-native';
 import TabBar from '../TabBar/TabBar';
 import GeneralStatusBar from '../StatusBar/GeneralStatusBar';
-import LookUpBox from '../Search/Lookup';
+import LookUpBox from '../LookUp/Lookup';
 import UserDailyContent from '../UserInfo/DailyInfo';
 import Welcome from '../UserInfo/Welcome';
 
 const screenwidth = Dimensions.get('screen').width;
 const contentwidth = screenwidth * 0.9;
 
-class Home extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.appHeader}>
-          <GeneralStatusBar backgroundColor="white" barStyle="dark-content" />
-        </View>
+function Home(props) {
+  const {navigation} = props;
+
+  return (
+    <View style={styles.container}>
+      <View style={styles.appHeader}>
+        <GeneralStatusBar backgroundColor="white" barStyle="dark-content" />
+      </View>
+      <SafeAreaView style={{flex: 1}}>
         <View style={styles.appBody}>
           <View style={styles.contentBox}>
             <View style={styles.welcomeBox}>
@@ -25,16 +34,16 @@ class Home extends Component {
               <UserDailyContent />
             </View>
             <View style={styles.userLookUpBox}>
-              <LookUpBox contentwidth={contentwidth} />
+              <LookUpBox contentwidth={contentwidth} navigation={navigation} />
             </View>
           </View>
         </View>
         <View style={styles.appFooter}>
           <TabBar />
         </View>
-      </View>
-    );
-  }
+      </SafeAreaView>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
