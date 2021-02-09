@@ -6,7 +6,7 @@ import {
   TouchableHighlight,
   View,
 } from 'react-native';
-import {SwipeListView} from 'react-native-swipe-list-view';
+import {SwipeListView, SwipeRow} from 'react-native-swipe-list-view';
 
 export default function ListView() {
   const [listData, setListData] = useState(

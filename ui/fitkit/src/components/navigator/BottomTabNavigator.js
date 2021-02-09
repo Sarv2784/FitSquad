@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MCicons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -12,8 +12,9 @@ const Tab = createBottomTabNavigator();
 function TabNavigator() {
   return (
     <Tab.Navigator
+      styles={styles.tabBarItem}
       screenOptions={({route}) => ({
-        tabBarIcon: ({focused, color, size}) => {
+        tabBarIcon: ({focused, color}) => {
           let iconName;
 
           if (route.name === 'Home') {
@@ -21,8 +22,6 @@ function TabNavigator() {
           } else if (route.name === 'Settings') {
             iconName = 'man-sharp';
           }
-
-          // You can return any component that you like here!
           return <Ionicons name={iconName} size={36} color={color} />;
         },
       })}
@@ -35,5 +34,14 @@ function TabNavigator() {
     </Tab.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  tabBarItem: {
+    fontSize: 14,
+    marginTop: 3,
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+});
 
 export default TabNavigator;
