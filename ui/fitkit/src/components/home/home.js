@@ -38,9 +38,6 @@ function Home(props) {
             </View>
           </View>
         </View>
-        <View style={styles.appFooter}>
-          <TabBar />
-        </View>
       </SafeAreaView>
     </View>
   );
@@ -56,14 +53,11 @@ const styles = StyleSheet.create({
     flex: 0.05,
   },
   appBody: {
-    flex: 0.95,
+    flex: 1,
     backgroundColor: 'white',
     alignSelf: 'stretch',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  appFooter: {
-    flex: 0.1,
   },
   contentBox: {
     flex: 1,
