@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image, FlatList} from 'react-native';
+import {View, Text, StyleSheet, FlatList} from 'react-native';
 
 const styles = StyleSheet.create({
   listcontainer: {
@@ -48,14 +48,16 @@ const CustomRow = ({title, description}) => (
   </View>
 );
 
-export default function CustomListview({itemList}) {
-  return (
-    <View style={styles.listcontainer}>
-      <FlatList
-        data={itemList}
-        renderItem={({item}) => <Text>{item.title}</Text>}
-        keyExtractor={(item, index) => index.toString()}
-      />
-    </View>
-  );
-}
+const CustomListview = ({itemList}) => (
+  <View style={styles.listcontainer}>
+    <FlatList
+      data={itemList}
+      renderItem={({item}) => (
+        <CustomRow title={item.title} description={item.description} />
+      )}
+      keyExtractor={(item, index) => index.toString()}
+    />
+  </View>
+);
+
+export default CustomListview;

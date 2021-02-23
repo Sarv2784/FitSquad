@@ -1,9 +1,7 @@
 import * as React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import MCicons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import MIicons from 'react-native-vector-icons/MaterialIcons';
 import HomeStackNavigator from './HomeStackNavigator';
 import CoachLookUp from '../lookups/coachlookup/CoachLookUp';
 

@@ -1,13 +1,5 @@
-import React, {Component} from 'react';
-import {
-  StyleSheet,
-  View,
-  StatusBar,
-  Text,
-  Dimensions,
-  SafeAreaView,
-} from 'react-native';
-import TabBar from '../tabbar/tabbar';
+import React from 'react';
+import {StyleSheet, View, Dimensions, SafeAreaView} from 'react-native';
 import GeneralStatusBar from '../statusbar/statusbar';
 import LookUpArea from '../lookups/lookup';
 import UserDailyContent from '../user/dailyinfo';

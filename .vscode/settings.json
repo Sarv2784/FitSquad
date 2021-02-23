@@ -1,4 +1,4 @@
 {
-    "editor.formatOnType": true,
-    "git.ignoreLimitWarning": true
+	"editor.formatOnType": true,
+	"git.ignoreLimitWarning": true
 }

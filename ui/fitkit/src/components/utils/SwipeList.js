@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   Text,
@@ -6,7 +6,7 @@ import {
   TouchableHighlight,
   View,
 } from 'react-native';
-import {SwipeListView, SwipeRow} from 'react-native-swipe-list-view';
+import {SwipeListView} from 'react-native-swipe-list-view';
 
 export default function ListView() {
   const [listData, setListData] = useState(
@@ -30,7 +30,7 @@ export default function ListView() {
   };
 
   const onRowDidOpen = (rowKey) => {
-    console.log('This row opened', rowKey);
+    //console.log('This row opened', rowKey);
   };
 
   const renderItem = (data) => (
@@ -83,38 +83,43 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   backTextWhite: {
-    color: '#FFF',
+    color: 'lightblue',
   },
   rowFront: {
     alignItems: 'center',
-    backgroundColor: '#CCC',
-    borderBottomColor: 'black',
-    borderBottomWidth: 1,
+    backgroundColor: 'lightblue',
+    margin: 10,
     justifyContent: 'center',
-    height: 50,
+    height: 175,
+    borderRadius: 20,
   },
   rowBack: {
     alignItems: 'center',
-    backgroundColor: '#DDD',
+    backgroundColor: 'white',
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingLeft: 15,
+    height: 175,
   },
   backRightBtn: {
     alignItems: 'center',
     bottom: 0,
+    margin: 10,
     justifyContent: 'center',
     position: 'absolute',
     top: 0,
     width: 75,
+    borderRadius: 20,
   },
   backRightBtnLeft: {
     backgroundColor: 'blue',
     right: 75,
+    borderRadius: 20,
   },
   backRightBtnRight: {
     backgroundColor: 'red',
     right: 0,
+    borderRadius: 20,
   },
 });
