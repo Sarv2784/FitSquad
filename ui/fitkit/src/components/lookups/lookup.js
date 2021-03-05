@@ -11,8 +11,9 @@ class UserLookUpBox extends PureComponent {
     const lookupboxwidth = (this.props.contentwidth - 20) * 0.5;
 
     return (
-      <View style={{flex: 1}}>
+      <View style={styles.container}>
         <View
+          // eslint-disable-next-line react-native/no-inline-styles
           style={{
             backgroundColor: 'grey',
             width: lookupboxwidth,
@@ -24,7 +25,6 @@ class UserLookUpBox extends PureComponent {
         <View style={styles.lookupBox}>
           <ScrollView
             horizontal={true}
-            style={styles.contentContainer}
             showsHorizontalScrollIndicator={false}
             persistentScrollbar={true}
             showsVerticalScrollIndicator={false}>
@@ -65,6 +65,9 @@ class UserLookUpBox extends PureComponent {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   lookupBox: {
     flexDirection: 'row',
     flex: 1,

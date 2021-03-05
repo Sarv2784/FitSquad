@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeStackNavigator from './HomeStackNavigator';
-import CoachLookUp from '../lookups/coachlookup/CoachLookUp';
+import GroupDetails from '../groupDetails/GroupDetails';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,7 +28,7 @@ function TabNavigator() {
         inactiveTintColor: 'lightblue',
       }}>
       <Tab.Screen name="Home" component={HomeStackNavigator} />
-      <Tab.Screen name="Settings" component={CoachLookUp} />
+      <Tab.Screen name="Settings" component={GroupDetails} />
     </Tab.Navigator>
   );
 }

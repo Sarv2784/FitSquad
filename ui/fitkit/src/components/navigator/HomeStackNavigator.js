@@ -2,6 +2,7 @@ import * as React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from '../home/home';
 import CoachLookUp from '../lookups/coachlookup/CoachLookUp';
+import GroupDetails from '../groupDetails/GroupDetails';
 const HomeStack = createStackNavigator();
 
 function HomeStackNavigator() {
@@ -13,8 +14,8 @@ function HomeStackNavigator() {
         options={{headerShown: false}}
       />
       <HomeStack.Screen
-        name="CoachLookUp"
-        component={CoachLookUp}
+        name="GroupDetails"
+        component={GroupDetails}
         options={{headerShown: false}}
       />
     </HomeStack.Navigator>

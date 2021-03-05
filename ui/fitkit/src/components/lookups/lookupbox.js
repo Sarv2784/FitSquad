@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 import {Pressable, StyleSheet, View, ImageBackground, Text} from 'react-native';
 
 const LookUpBox = ({imagePath, displayText, lookUpBoxwidth, navigation}) => (
